@@ -1,6 +1,6 @@
 {
   "name": "ptimeout",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Promise-based timeout",
   "main": "dist/index.js",
   "source": "src/index.js",
