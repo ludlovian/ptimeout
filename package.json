@@ -1,0 +1,45 @@
+{
+  "name": "ptimeout",
+  "version": "0.0.1",
+  "description": "Promise-based timeout",
+  "main": "dist/index.js",
+  "source": "src/index.js",
+  "module": "dist/index.mjs",
+  "scripts": {
+    "clean": "rm -rf dist/ .nyc_output/ coverage/ node_modules/.cache/",
+    "format": "prettier-standard {src,test}/*.js",
+    "lint": "standard {src,test}/*.js|snazzy",
+    "test": "nyc ava",
+    "coverage": "npm run test && nyc report --reporter=html && sirv coverage/ -p 8000",
+    "build": "rollup -c rollup.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ludlovian/ptimeout.git"
+  },
+  "author": "",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/ludlovian/ptimeout/issues"
+  },
+  "homepage": "https://github.com/ludlovian/ptimeout#readme",
+  "devDependencies": {
+    "ava": "^3.12.1",
+    "esm": "^3.2.25",
+    "nyc": "^15.1.0",
+    "prettier-standard": "^16.4.1",
+    "promise-goodies": "github:ludlovian/promise-goodies",
+    "rollup": "^2.27.1",
+    "rollup-plugin-cleanup": "^3.1.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "sirv-cli": "^1.0.6",
+    "snazzy": "^8.0.0",
+    "standard": "^14.3.4"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ]
+  },
+  "dependencies": {}
+}
